@@ -47,7 +47,8 @@ def get_data(event, context):
         date = [b for b in g[0]]
         wr.writerow(['-'.join((g[0].split('-'))[0:3]),g[0].split('-')[3],g[1],g[2],g[3],g[4]])
     f.close()
-
+except Exception as e:
+    print(str(e))
     driver.quit()
 
 
